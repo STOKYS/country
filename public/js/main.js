@@ -16,6 +16,8 @@ document.getElementById("titlescreen_section_west_btn").addEventListener("click"
 
 function fnc_showMainPage(which){
     $("#mainpage").show()
+    $("#westGermany>main").css({"height":`${$("#westGermany").height()}`})
+    $("#eastGermany>main").css({"height":`${$("#eastGermany").height()}`})
     if (which=="west"){
         $("#westGermany").show()
         $("#eastGermany").hide()
@@ -28,12 +30,12 @@ function fnc_showMainPage(which){
 }
 
 document.getElementById("toEast").addEventListener("click", function(){
-    $("#westGermany").hide(500)
+    $("#westGermany").hide(0)
     $("#eastGermany").show()
 })
 
 document.getElementById("toWest").addEventListener("click", function(){
-    $("#eastGermany").hide()
+    $("#eastGermany").hide(0)
     $("#westGermany").show()
 })
 
@@ -53,4 +55,14 @@ $("p").hover(function(){
     $(this).css({"background-color":"rgb(45,45,45)", "border":"1px solid grey"})
 }, function(){
     $(this).css({"background-color":"rgba(0,0,0,0)", "border":"1px solid rgba(0,0,0,0)"})
+})
+
+$("#titlescreen_section_west").hover(function(){
+    console.log("hey")
+    $("#titlescreen").css({"background-image":"url('../img/westgermanyback.png')"})
+})
+
+$("#titlescreen_section_east").hover(function(){
+    console.log("hey")
+    $("#titlescreen").css({"background-image":"url('../img/eastgermanyback.png')"})
 })

@@ -59,6 +59,7 @@ color: white;
 
 .titlescreen_section_img{
     width: 30%;
+    margin-top: 20%;
     margin-left: 35%;
 }
 
@@ -79,8 +80,11 @@ color: white;
 #titlescreen_section > div > button {
     width: 35%;
     margin-left: 32.5%;
-    height: 50px;
-    background: rgba(0,0,0,0);
+    height: fit-content;
+    color: White;
+    font-size: 36px;
+    font-weight: 400;
+    background: rgba(180,180,180,0.5);
     border: 3px solid black;
 }
 
@@ -108,12 +112,20 @@ header{
     position: sticky;
     top: 70px;
     right: 0;
-    height:calc(100vh - 70px);
-    width:20%;
     text-align: center;
     background-color: rgb(46, 46, 46);
     float: right;
     transition: width 0.5s ease, height 0.5s ease;
+    width: 20%; height: calc(100vh - 70px); max-height: calc(100vh - 70px); overflow-y: hidden;
+}
+
+.cont{
+    transition: filter 0.5s ease;
+    margin: 0;
+    float: left;
+    margin-left: 10%;
+    width: 60%;
+     height: max-content;
 }
 
 .cont>h1{
@@ -125,17 +137,40 @@ header{
     padding-left: 50px;
 }
 
-.cont>p{
+.cont>section>p{
     border: 1px solid rgba(0,0,0,0);
     transition: background-color 0.2s ease;
     padding: 10px;
     margin:0;
-    margin-left: 50px;
     color: rgb(200,200,200);
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
-.cont>*>b{
+.titlescreen_section_text{
+    border: 1px solid grey;
+    height: 30%;
+}
+
+.cont>section>h2{
+    padding-bottom: 10px;
+    padding-left: 5%;
+    border-bottom: 1px solid grey;
+    font-weight: 400;
+}
+
+.cont>section{
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.cont>section>h3{
+    text-align: center;
+    font-weight: 500;
+}
+
+.cont>section>*>b{
     color: white;
     font-weight: 600;
 }
@@ -145,18 +180,33 @@ header{
     border: 2px solid black;
 }
 
-.cont{
-    transition: filter 0.5s ease;
-    margin: 0;
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(50,50,50);
+}
+
+header>div{
+    height: 100%;
+    width: 30%;
+    margin-left: 35%;
+}
+
+header>div>button{
     float: left;
-    width: 70%;
-   margin-top: 70px;
+    margin: 0;
+    width: calc(100%/3);
+    height: 100%;
+    font-size: 22px;
+    background-color: rgb(30,30,30);
+    color: rgb(200,200,200);
+    font-weight: 700;
 }
 
 main{
     margin-top: -70px;
-    height: 2000px;
     width: 100%;
+    height: 2000px;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -183,7 +233,7 @@ main{
 }
 
 .mainpage_section{
-    height: 2000px;
+    height: fit-content;
     width: 100vw;
 }
 
@@ -203,7 +253,8 @@ main{
 table{
     width: 90%;
     margin-left: 5%;
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
