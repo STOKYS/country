@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>West And East Germany</title>
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/dark.css" id="themecss">
 </head>
 
 <body>
@@ -54,6 +55,8 @@
             <section id="westGermany" class="page">
                 <header>
                     <div>
+                        <button class="showmenu">Menu</button>
+                        <button class="themechanger" disabled>Theme</button>
                         <button>Main</button>
                         <button>History</button>
                         <button id="toEast">To East-></button>
@@ -498,7 +501,7 @@
                                 Grass (with The Tin Drum and The Flounder).</p>
                         </section>
                     </div>
-                    <div class="info">
+                    <div class="info" style="display:inline">
                         <h1>Federal Republic of Germany</h1>
                         <img class="flag" src="img/westflag.png" width="50%">
                         <figcaption>Flag of FRG</figcaption>
@@ -583,9 +586,11 @@
             <section id="eastGermany" class="page">
                 <header>
                     <div>
+                        <button id="toWest">&#60;- To West</button>
                         <button>Main</button>
                         <button>History</button>
-                        <button id="toWest">&#60;- To West</button>
+                        <button class="themechanger" disabled>Theme</button>
+                        <button class="showmenu">Menu</button>
                     </div>
                 </header>
                 <main>
@@ -861,7 +866,7 @@
                                 the Wende.</p>
                         </section>
                     </div>
-                    <div class="info">
+                    <div class="info" style="display:inline">
                         <h1>German Democratic Republic</h1>
                         <img class="flag" src="img/eastflag.png" width="50%">
                         <figcaption>Flag of GDR</figcaption>
