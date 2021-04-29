@@ -1,84 +1,176 @@
+
 body {
     background-color: black;
 }
 
-header {
-    background-color: rgb(51, 51, 51);
-}
-
-.info {
-    background-color: rgb(46, 46, 46);
-}
-
-.cont>section>p {
-    border: 1px solid rgba(0, 0, 0, 0);
-    color: rgb(200, 200, 200);
-}
-
-.titlescreen_section_text {
-    border: 1px solid grey;
-}
-
-.cont>section>h2{
-    border-bottom: 1px solid grey;
-}
-
-.cont>section{
-    border: 2px solid grey;
-}
-
-.cont>section>*>b{
-    color: white;
-}
-
-.flag{
-    border: 2px solid black;
-}
-
-footer{
-    background-color: rgb(50,50,50); 
-}
-
-header>div>button{
-    background-color: rgba(80,80,80,0.5);
-    color: rgb(200,200,200);
-    border: 1px solid gray;
-}
-
-.page{
-    background-color: rgb(40,40,50);
-    border-bottom: 6px solid rgb(60,60,60);
-}
-
-table{
-    border: 1px solid grey;
-}
-
-#history{
+#intro{
     background-color: black;
 }
 
-.history_content_line_left{
-    border-right: 0.3vw solid white;
+#intro_box>h1{
+    color: white;
 }
 
-.history_content_line_right{
-    border-left: 0.3vw solid white;
+#intro_box_button{
+    color: white;
+    border-color: white;
+    background-color: rgba(50,50,50,0.5);
 }
 
-.history_content_main_article_heading{
-    border-bottom: 3px solid white;
+#history_timeline{
+    border-color: grey;
+    background-color: rgb(25,30,40);
+    color: white;
 }
 
-.history_content_main_article_text{
-    background-color: rgba(50,50,50,0.6);
-    border: 1px solid white;
+#history_timeline_box_top{
+    border-color: white;
 }
 
-.history_content_section>h2{
-    border-bottom: 1px solid white;
+#history_timeline_box_top{
+    border-color: white;
 }
 
-.history_content_section>hr{
-    border-bottom: 2px solid white;
+#history_quick{
+    background-color: black;
+}
+
+#history_quick_box{
+    border-color: grey;
+}
+
+.history_quick_box_info_class{
+    border-color: grey;
+}
+
+#history_quick_box_info_box01{
+    border-color: grey;
+}
+
+#history_quick_box_info_box03{
+    border-color: grey;
+}
+
+#history_quick_box_info_title{
+    color: rgb(180,180,180);
+}
+
+#history_quick_box_info_year{
+    color: rgb(150,150,150);
+}
+
+#history_quick_box_info_text{
+    color: white;
+}
+
+header, footer{
+    background-color: rgb(25,30,40);
+    border-color: white;
+}
+
+#main_content{
+    border-color: white;
+    background-color: rgba(40, 40, 40,0.5);
+}
+
+#main_content>section{
+    border-color: grey;
+}
+
+#main_info{
+    background-color: rgb(20,20,30);
+}
+
+#info_title{
+    color: rgb(240,240,240);
+}
+
+#info_other_title{
+    color: rgb(150,150,150);
+}
+
+#info_year{
+    color: rgb(200,200,200)
+}
+
+#info_other_year{
+    color: rgb(150,150,150);
+}
+
+#info_flag_desc{
+    color: rgb(120,120,120);
+}
+
+.info_table{
+    border-color: gray;
+    color: white;
+}
+
+#main_info>h4{
+    color: rgb(180,180,180);
+}
+
+#main_content>section>h3{
+    color: rgb(220,220,220);
+    border-color: rgb(180,180,180);
+}
+
+#main_content>section>h4{
+    color: rgb(200,200,200);
+}
+
+#main_content>section>h5{
+    color: rgb(180,180,180);
+}
+
+#main_content>section>p{
+    color: rgb(150,150,150)
+}
+
+#main_content>section>div>h3{
+    color: rgb(220,220,220);
+    border-color: rgb(180,180,180);
+}
+
+#main_content>section>div>h4{
+    color: rgb(200,200,200);
+}
+
+#main_content>section>div>h5{
+    color: rgb(180,180,180);
+}
+
+#main_content>section>div>p{
+    color: rgb(150,150,150)
+}
+
+#data_title{
+    color: white;
+}
+
+#data_year{
+    color: rgb(150,150,150);
+}
+
+.selection_menu{
+    border-color: grey
+}
+
+.selection_menu>button{
+    background-color: rgb(50,50,50);
+    color: white;
+    border-color: black;
+}
+
+
+.selection_menu>button:disabled{
+    background-color: rgb(10,50,10);
+}
+
+#main_content>section>div>ul>li{
+color: rgb(150,150,150);
+}
+
+#main_content>section>ul>li{
+    color: rgb(150,150,150);
 }

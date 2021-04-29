@@ -1,0 +1,9 @@
+@media only screen and (max-width: 1080px) {
+    .history_quick_box_info_class{
+        width: 100%;
+        margin: 0;
+    }
+    .history_quick_box_info_class:last-child{
+        display: none;
+    }
+}
