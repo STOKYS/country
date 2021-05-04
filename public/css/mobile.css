@@ -2,8 +2,54 @@
     .history_quick_box_info_class{
         width: 100%;
         margin: 0;
+        height: 100%;
     }
-    .history_quick_box_info_class:last-child{
-        display: none;
+    #intro_box_button{
+        width: 100%;
+        margin-left: 0%;
+        font-size: 56px;
+    }
+    #intro_box>h1{
+        font-size: 58px;
+    }
+    #main_info{
+        width: 100%;
+        margin: 0;
+        overflow-y: scroll !important;
+    }
+    #main_content{
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 5px;
+        border: 0;
+    }
+    #main_content>section>p{
+        font-size: 12px;
+    }
+    #main_content>section>div>p{
+        font-size: 12px;
+    }
+    .selection_menu{
+        width: 100%;
+        float: left;
+        height: fit-content;
+        border: 1px solid;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    header>button{
+        width: 25%;
+        height: 100%;
+        margin: 0;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    
+    header>button:first-child{
+        margin-left: 0%;
     }
 }

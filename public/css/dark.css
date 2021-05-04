@@ -1,6 +1,6 @@
 
 body {
-    background-color: black;
+    background-color: rgb(30, 30, 50);
 }
 
 #intro{
@@ -32,11 +32,17 @@ body {
 }
 
 #history_quick{
-    background-color: black;
+    background-color: rgb(20,20,30);
 }
 
 #history_quick_box{
-    border-color: grey;
+    border-color: rgb(35,35,40);
+}
+
+#history_quick_box_info_button{
+    background-color: rgb(30,30,30);
+    color: rgb(200,200,200);
+    border-color: rgb(40,40,50);
 }
 
 .history_quick_box_info_class{
@@ -78,6 +84,7 @@ header, footer{
 }
 
 #main_info{
+    border-color: grey;
     background-color: rgb(20,20,30);
 }
 
@@ -173,4 +180,18 @@ color: rgb(150,150,150);
 
 #main_content>section>ul>li{
     color: rgb(150,150,150);
+}
+
+#main_info>ol{
+    color: rgb(200,200,200);
+}
+
+header>button{
+    background-color: rgb(50,50,50);
+    color: rgb(150, 150, 150);
+}
+
+header>button:disabled{
+    background-color: rgb(20,20,20);
+    color: rgb(100,100,100);
 }

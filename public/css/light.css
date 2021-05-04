@@ -1,0 +1,202 @@
+/*
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+#intro{
+    background-color: rgb(240,240,240);
+}
+
+#intro_box>h1{
+    color: black;
+}
+
+#intro_box_button{
+    color: rgb(50,50,50);
+    border-color: black;
+    background-color: rgba(200,200,200,0.5);
+}
+
+#history_timeline{
+    border-color: grey;
+    background-color: rgb(230,230,230);
+    color: black;
+}
+
+#history_timeline_box_top{
+    border-color: black;
+}
+
+#history_timeline_box_top{
+    border-color: black;
+}
+
+#history_quick{
+    background-color: rgb(240,240,240);
+}
+
+#history_quick_box{
+    border-color: rgb(240,240,240);
+}
+
+#history_quick_box_info_button{
+    background-color: rgb(230,230,230);
+    color: rgb(50,50,50);
+    border-color: rgb(40,40,50);
+}
+
+.history_quick_box_info_class{
+    border-color: grey;
+}
+
+#history_quick_box_info_box01{
+    border-color: grey;
+}
+
+#history_quick_box_info_box03{
+    border-color: grey;
+}
+
+#history_quick_box_info_title{
+    color: rgb(10,10,10);
+}
+
+#history_quick_box_info_year{
+    color: rgb(30,30,30);
+}
+
+#history_quick_box_info_text{
+    color: black;
+}
+
+header, footer{
+    background-color: rgb(200,200,200);
+    border-color: black;
+}
+
+#main_content{
+    border-color: black;
+    background-color: rgba(230, 230, 255,0.5);
+}
+
+#main_content>section{
+    border-color: grey;
+}
+
+#main_info{
+    border-color: grey;
+    background-color: rgb(200,200,210);
+}
+
+#info_title{
+    color: rgb(40,40,40);
+}
+
+#info_other_title{
+    color: rgb(80,80,80);
+}
+
+#info_year{
+    color: rgb(60,60,60)
+}
+
+#info_other_year{
+    color: rgb(100,100,100);
+}
+
+#info_flag_desc{
+    color: rgb(120,120,120);
+}
+
+.info_table{
+    border-color: gray;
+    color: rgb(20,20,20);
+}
+
+#main_info>h4{
+    color: rgb(50,50,50);
+}
+
+
+
+#main_content>section>h3{
+    color: rgb(35,35,35);
+    border-color: rgb(80,80,80);
+}
+
+#main_content>section>h4{
+    color: rgb(50,50,50);
+}
+
+#main_content>section>h5{
+    color: rgb(70,70,70);
+}
+
+#main_content>section>p{
+    color: rgb(60,60,60)
+}
+
+
+
+
+#main_content>section>div>h3{
+    color: rgb(35,35,35);
+    border-color: rgb(80,80,80);
+}
+
+#main_content>section>div>h4{
+    color: rgb(50,50,50);
+}
+
+#main_content>section>div>h5{
+    color: rgb(70,70,70);
+}
+
+#main_content>section>div>p{
+    color: rgb(60,60,60)
+}
+
+#data_title{
+    color: black;
+}
+
+#data_year{
+    color: rgb(50,50,50);
+}
+
+.selection_menu{
+    border-color: grey
+}
+
+.selection_menu>button{
+    background-color: rgb(200,200,200);
+    color: rgb(20,20,20);
+    border-color: rgb(200,200,200)
+}
+
+
+.selection_menu>button:disabled{
+    background-color: rgb(50, 150, 50);
+}
+
+#main_content>section>div>ul>li{
+color: rgb(50,50,50);
+}
+
+#main_content>section>ul>li{
+    color: rgb(50,50,50);
+}
+
+#main_info>ol{
+    color: rgb(20,20,20);
+}
+
+header>button{
+    background-color: rgb(150,150,150);
+    color: rgb(20, 20, 20);
+}
+
+header>button:disabled{
+    background-color: rgb(20,20,20);
+    color: rgb(100,100,100);
+}*/
