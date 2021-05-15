@@ -124,12 +124,31 @@ $("#goBack").click(function () {
   $("body").css({ height: "100vh", width: "100vw" });
 });
 
+let data = []
+
 function loadData() {
-  $("main").html(recievedData.html);
-  recievedData = "";
-  /* let x = document.getElementsByTagName("main")[0].innerHTML
-    console.log(x)*/
-  $("#main_info").hover(
+
+ $("main").html(`<div id="main_content"><h1 id="data_title"></h1><h2 id="data_year"></h2><hr></div><div id="main_info"></div>`)
+  data[value] = recievedData;
+  $("#data_title").html(data[value].content[0])
+  $("#data_year").html(data[value].content[1])
+  $("#main_info").html(data[value].info)
+  for (let i = 0; i < data[value].sections_main.length; i++){
+    $(`<section id=sec0${i}>${data[value].sections_main[i]}</section>`).appendTo( "#main_content")
+    if(Array.isArray(data[value].sections_opt[i])){
+        $(`${data[value].sections_opt[i][0]}`).appendTo(`#sec0${i}`)
+    } else{
+        $(`${data[value].sections_opt[i]}`).appendTo(`#sec0${i}`)
+    }
+  }
+
+  console.log(recievedData)
+
+ //$("main").html(recievedData.html)
+
+  getingsomedat()
+
+    $("#main_info").hover(
     function () {
       if (window.innerWidth > 1080) {
         $(this).css({
@@ -164,20 +183,11 @@ function loadData() {
   $("#main_content>section>h3").click(function () {
     if ($(this).siblings().first().css("display") == "none") {
         $(this).css({ "border-bottom": "1px solid" });
-      if ($(this).siblings("div").length != 0){
-        $(this).siblings("div").first().show(500);
-        $(this).siblings("div").eq(1).show(500);
-        $(this).siblings("div").children("button").each(function () {
-            $(this).removeAttr("disabled");
-          });
-        $(this).siblings("div").children("button").first().attr("disabled", "disabled");
         let bro = $(this)
         window.setTimeout(function () {
           bro.parent().css({"min-height":bro.outerHeight() + bro.siblings("div").first().outerHeight() + 20});
         }, 500)
-      } else {
         $(this).siblings().show(500)
-      }
     } else {
       $(this).siblings().hide(500);
       $(this).css({ "border-bottom": "0" });
@@ -191,9 +201,10 @@ function loadData() {
 
   $(".selection_menu>button").click(function () {
     $(this).prop("disabled", true);
+    let i = $(this).parent().parent().attr("id").slice(-1)
     $(this).siblings().prop("disabled", false);
-    $(this).parent().siblings("div").hide(100);
-    $(`#art${$(this).attr("id").slice(-2)}`).show(100);
+    $(this).parent().siblings(":not(h3)").remove();
+    $(`${data[value].sections_opt[i][$(this).attr('id').slice(-1) - 1]}`).appendTo( `#sec0${i}` );
   });
 
   if (window.innerWidth <= 1080) {
@@ -209,9 +220,9 @@ function loadData() {
 
   function getTouches(evt) {
     return (
-      evt.touches || // browser API
+      evt.touches ||
       evt.originalEvent.touches
-    ); // jQuery
+    ); 
   }
 
   function handleTouchStart(evt) {
@@ -244,4 +255,49 @@ function loadData() {
     xDown = null;
     yDown = null;
   }
+}
+
+function getingsomedat(){
+
+    let sections = $("#main_content>section").length
+    let sections_m = []
+    let sections_o = []
+    for (let i = 0; i < sections; i++){
+        if ($("#main_content>section").eq(i).children("h3").length){
+            sections_m[i] = `<h3>${$("#main_content>section").eq(i).children("h3").html()}</h3>`
+            if ($("#main_content>section").eq(i).children("div").length){
+                sections_m[i] += `<div class="selection_menu">${$("#main_content>section").eq(i).children("div").html()}</div>`
+            }
+        } else {
+            sections_m[i] = ''
+        }
+    }
+    for (let i = 0; i < sections; i++){
+        if ($("#main_content>section").eq(i).children("div").length){
+            sections_o[i] = ''
+            let bro = []
+            $("#main_content>section").eq(i).children("div:not(:first)").each(function(){
+                bro.push($(this).html())
+            })
+            sections_o[i] = bro
+        }
+        else {
+            for (let j = 0; j < $("#main_content>section").eq(i).children("p", "ul", "ol", "h5", "h4").length; j++){
+                sections_o[i] = ''
+                $("#main_content>section").eq(i).children("p", "ul", "ol", "h5", "h4").each(function(){
+                    sections_o[i] += $(this)[0].outerHTML
+                })
+            }
+        }
+        
+    }
+    let objecti = {
+        content: [$("#data_title").html(), $("#data_year").html()],
+        info: $("#main_info").html(),
+        sections_main: sections_m,
+        sections_opt: sections_o
+    } 
+
+    let res = JSON.stringify(objecti)
+    console.log(res)
 }
