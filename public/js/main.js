@@ -18,7 +18,7 @@ const quickinfo = [
   {
     title: "Kingdom of Germany",
     year: "843 - 962",
-    text: "The terms Kingdom of Germany or German Kingdom (Latin: regnum Teutonicorum \"Kingdom of the Germans\", regnum Teutonicum \"German Kingdom\", regnum Alamanie) denote the mostly Germanic-speaking Eastern Frankish kingdom, which was formed by the Treaty of Verdun in 843, especially after the kingship passed from Frankish kings to the Saxon Ottonian dynasty in 919. The king was elected, initially by the rulers of the stem duchies, who generally chose one of their own. After 962, when Otto I was crowned emperor, East Francia formed the bulk of the Holy Roman Empire, which also included the Kingdom of Italy and, after 1032, the Kingdom of Burgundy.",
+    text: 'The terms Kingdom of Germany or German Kingdom (Latin: regnum Teutonicorum "Kingdom of the Germans", regnum Teutonicum "German Kingdom", regnum Alamanie) denote the mostly Germanic-speaking Eastern Frankish kingdom, which was formed by the Treaty of Verdun in 843, especially after the kingship passed from Frankish kings to the Saxon Ottonian dynasty in 919. The king was elected, initially by the rulers of the stem duchies, who generally chose one of their own. After 962, when Otto I was crowned emperor, East Francia formed the bulk of the Holy Roman Empire, which also included the Kingdom of Italy and, after 1032, the Kingdom of Burgundy.',
     img: "media/img/quick_eafran.png",
   },
   {
@@ -54,19 +54,19 @@ const quickinfo = [
   {
     title: "Weimar Republic",
     year: "1918 - 1933",
-    text: "The Weimar Republic (German: Weimarer Republik [ˈvaɪmaʁɐ ʁepuˈbliːk] (About this soundlisten)) was the German state from 1918 to 1933, as it existed as a federal constitutional republic. The state was officially the German Reich (Deutsches Reich), and was also referred to as the German Republic (Deutsche Republik). The term \"Weimar Republic\" refers to the city of Weimar, where the republic's constituent assembly first took place. In English the country was usually simply called \"Germany\"; the term \"Weimar Republic\" did not become common in English until the 1930s.",
+    text: 'The Weimar Republic (German: Weimarer Republik [ˈvaɪmaʁɐ ʁepuˈbliːk] (About this soundlisten)) was the German state from 1918 to 1933, as it existed as a federal constitutional republic. The state was officially the German Reich (Deutsches Reich), and was also referred to as the German Republic (Deutsche Republik). The term "Weimar Republic" refers to the city of Weimar, where the republic\'s constituent assembly first took place. In English the country was usually simply called "Germany"; the term "Weimar Republic" did not become common in English until the 1930s.',
     img: "media/img/quick_weimr.png",
   },
   {
     title: "Nazi Germany",
     year: "1933 - 1945",
-    text: "Nazi Germany, officially known as the German Reich until 1943 and Greater German Reich from 1943 to 1945, was the German state between 1933 and 1945, when Adolf Hitler and the Nazi Party controlled the country which they transformed into a dictatorship. Under Hitler's rule, Germany quickly became a totalitarian state where nearly all aspects of life were controlled by the government. The Third Reich,[i] meaning \"Third Realm\" or \"Third Empire\", alluded to the Nazis' conceit that Nazi Germany was the successor to the earlier Holy Roman Empire (800–1806) and German Empire (1871–1918). The Third Reich, which Hitler and the Nazis referred to as the Thousand Year Reich,[4][j] ended in May 1945 after just 12 years, when the Allies defeated Germany, ending World War II in Europe.",
+    text: 'Nazi Germany, officially known as the German Reich until 1943 and Greater German Reich from 1943 to 1945, was the German state between 1933 and 1945, when Adolf Hitler and the Nazi Party controlled the country which they transformed into a dictatorship. Under Hitler\'s rule, Germany quickly became a totalitarian state where nearly all aspects of life were controlled by the government. The Third Reich,[i] meaning "Third Realm" or "Third Empire", alluded to the Nazis\' conceit that Nazi Germany was the successor to the earlier Holy Roman Empire (800–1806) and German Empire (1871–1918). The Third Reich, which Hitler and the Nazis referred to as the Thousand Year Reich,[4][j] ended in May 1945 after just 12 years, when the Allies defeated Germany, ending World War II in Europe.',
     img: "media/img/quick_nazi.png",
   },
   {
     title: "Allied-occupied Germany",
     year: "1945 - 1949",
-    text: "Allied-occupied Germany (German: Deutschland in der Besatzungszeit, literally \"Germany in the occupation period\") was the administration of Germany (German: Deutsches Reich) upon defeat of Nazi Germany in World War II, when the victorious Allies asserted joint authority and sovereignty over Germany as a whole, defined as all territories of the former German Reich west of the Oder–Neisse line, having declared the destruction of Nazi Germany at the death of Adolf Hitler (the 1945 Berlin Declaration). The four powers divided \"Germany as a whole\" into four occupation zones for administrative purposes under the three Western Allies (the United States, the United Kingdom, France) and the Soviet Union, respectively. This division was ratified at the August 1945 Potsdam Conference.[citation needed] The four zones were agreed by the United States, United Kingdom and Soviet Union at the February 1945 Yalta Conference, setting aside an earlier division into three zones (excluding France) proposed by the September 1944 London Protocol.",
+    text: 'Allied-occupied Germany (German: Deutschland in der Besatzungszeit, literally "Germany in the occupation period") was the administration of Germany (German: Deutsches Reich) upon defeat of Nazi Germany in World War II, when the victorious Allies asserted joint authority and sovereignty over Germany as a whole, defined as all territories of the former German Reich west of the Oder–Neisse line, having declared the destruction of Nazi Germany at the death of Adolf Hitler (the 1945 Berlin Declaration). The four powers divided "Germany as a whole" into four occupation zones for administrative purposes under the three Western Allies (the United States, the United Kingdom, France) and the Soviet Union, respectively. This division was ratified at the August 1945 Potsdam Conference.[citation needed] The four zones were agreed by the United States, United Kingdom and Soviet Union at the February 1945 Yalta Conference, setting aside an earlier division into three zones (excluding France) proposed by the September 1944 London Protocol.',
     img: "media/img/quick_occup.png",
   },
   {
@@ -85,10 +85,12 @@ const quickinfo = [
 
 const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 if (darkThemeMq.matches) {
-  $("#theme").attr("href","css/dark.css")
+  $("#theme").attr("href", "css/dark.css");
 } else {
-    alert("You are using White Theme, which might make your stay a little unpleasant. Please switch to Dark Theme in your device settings")
-  $("#theme").attr("href","css/light.css")
+  alert(
+    "You are using White Theme, which might make your stay a little unpleasant. Please switch to Dark Theme in your device settings"
+  );
+  $("#theme").attr("href", "css/light.css");
 }
 
 $("#history_timeline_slider_slider").on("input", function () {
@@ -115,7 +117,12 @@ $("#history_quick_box_info_button").click(function () {
   $("body>section:not(:last-child)").hide(300);
   $("#main").show();
   $("body").css({ height: "100%", width: "100%" });
-  socket.emit("document", value);
+  if (data[value]) {
+    recievedData = data[value];
+    loadData();
+  } else {
+    socket.emit("document", { index: value, type: true });
+  }
 });
 
 $("#goBack").click(function () {
@@ -124,31 +131,37 @@ $("#goBack").click(function () {
   $("body").css({ height: "100vh", width: "100vw" });
 });
 
-let data = []
+let data = [];
 
 function loadData() {
+  $("main").html(
+    `<div id="main_content"><h1 id="data_title"></h1><h2 id="data_year"></h2><hr></div><div id="main_info"></div>`
+  );
 
- $("main").html(`<div id="main_content"><h1 id="data_title"></h1><h2 id="data_year"></h2><hr></div><div id="main_info"></div>`)
   data[value] = recievedData;
-  $("#data_title").html(data[value].content[0])
-  $("#data_year").html(data[value].content[1])
-  $("#main_info").html(data[value].info)
-  for (let i = 0; i < data[value].sections_main.length; i++){
-    $(`<section id=sec0${i}>${data[value].sections_main[i]}</section>`).appendTo( "#main_content")
-    if(Array.isArray(data[value].sections_opt[i])){
-        $(`${data[value].sections_opt[i][0]}`).appendTo(`#sec0${i}`)
-    } else{
-        $(`${data[value].sections_opt[i]}`).appendTo(`#sec0${i}`)
-    }
+  console.log(data[value]);
+  $("#data_title").html(data[value].content[0]);
+  $("#data_year").html(data[value].content[1]);
+  $("#main_info").html(data[value].info);
+  for (let i = 0; i < data[value].sections_main.length; i++) {
+    $(
+      `<section id=sec0${i}>${data[value].sections_main[i]}</section>`
+    ).appendTo("#main_content");
+    $(`#sec0${i}`).children(":not(:first)").hide(0);
+    $(`#sec0${i}>h3`).css({ "border-bottom": "0" });
+    $(`#sec0${i}`).css("min-height", "0");
+    /* if (Array.isArray(data[value].sections_opt[i])) {
+      $(`${data[value].sections_opt[i][0]}`).appendTo(`#sec0${i}`);
+    } else {
+      $(`${data[value].sections_opt[i]}`).appendTo(`#sec0${i}`);
+    }*/
   }
+  $(`${data[value].sections_opt}`).appendTo("#sec00");
+  reconfigure();
+}
 
-  console.log(recievedData)
-
- //$("main").html(recievedData.html)
-
-  getingsomedat()
-
-    $("#main_info").hover(
+function reconfigure() {
+  $("#main_info").hover(
     function () {
       if (window.innerWidth > 1080) {
         $(this).css({
@@ -171,27 +184,41 @@ function loadData() {
     }
   );
 
-  $(".selection_menu").each(function () {
-    $(this)
-      .parent()
-      .css({
-        "min-height":
-          $(this).outerHeight() + $(this).siblings("h3").outerHeight() + 20,
-      });
-  });
-
   $("#main_content>section>h3").click(function () {
-    if ($(this).siblings().first().css("display") == "none") {
-        $(this).css({ "border-bottom": "1px solid" });
-        let bro = $(this)
-        window.setTimeout(function () {
-          bro.parent().css({"min-height":bro.outerHeight() + bro.siblings("div").first().outerHeight() + 20});
-        }, 500)
-        $(this).siblings().show(500)
+    if (
+      $(this).siblings().first().css("display") == "none" ||
+      !$(this).siblings("p").length
+    ) {
+      if (!$(this).siblings("p").length) {
+        console.log($(this).siblings("div").length);
+        if ($(this).siblings("div").length) {
+          socket.emit("document", {
+            index: value,
+            type: false,
+            idone: $(this).parent().attr("id").slice(-1),
+            idtwo: 0,
+          });
+        } else {
+          socket.emit("document", {
+            index: value,
+            type: false,
+            idone: $(this).parent().attr("id").slice(-1),
+          });
+        }
+      }
+      let bro = $(this);
+      window.setTimeout(function () {
+        bro.parent().css({
+          "min-height":
+            bro.outerHeight() + bro.siblings("div").first().outerHeight() + 20,
+        });
+      }, 500);
+      bro.siblings().show(500);
+      $(this).css({ "border-bottom": "1px solid" });
     } else {
       $(this).siblings().hide(500);
       $(this).css({ "border-bottom": "0" });
-      $(this).parent().css({"min-height": 0});
+      $(this).parent().css({ "min-height": 0 });
     }
   });
 
@@ -201,10 +228,31 @@ function loadData() {
 
   $(".selection_menu>button").click(function () {
     $(this).prop("disabled", true);
-    let i = $(this).parent().parent().attr("id").slice(-1)
+    let i = $(this).parent().parent().attr("id").slice(-1);
+    let j = $(this).attr("id").slice(-1) - 1;
     $(this).siblings().prop("disabled", false);
     $(this).parent().siblings(":not(h3)").remove();
-    $(`${data[value].sections_opt[i][$(this).attr('id').slice(-1) - 1]}`).appendTo( `#sec0${i}` );
+    if (Array.isArray(data[value].sections_opt[i])) {
+      if (data[value].sections_opt[i][j]) {
+        $(
+          `${data[value].sections_opt[i][$(this).attr("id").slice(-1) - 1]}`
+        ).appendTo(`#sec0${i}`);
+      } else {
+        socket.emit("document", {
+          index: value,
+          type: false,
+          idone: i,
+          idtwo: j,
+        });
+      }
+    } else {
+      socket.emit("document", {
+        index: value,
+        type: false,
+        idone: i,
+        idtwo: j,
+      });
+    }
   });
 
   if (window.innerWidth <= 1080) {
@@ -219,10 +267,7 @@ function loadData() {
   var yDown = null;
 
   function getTouches(evt) {
-    return (
-      evt.touches ||
-      evt.originalEvent.touches
-    ); 
+    return evt.touches || evt.originalEvent.touches;
   }
 
   function handleTouchStart(evt) {
@@ -257,47 +302,95 @@ function loadData() {
   }
 }
 
-function getingsomedat(){
-
-    let sections = $("#main_content>section").length
-    let sections_m = []
-    let sections_o = []
-    for (let i = 0; i < sections; i++){
-        if ($("#main_content>section").eq(i).children("h3").length){
-            sections_m[i] = `<h3>${$("#main_content>section").eq(i).children("h3").html()}</h3>`
-            if ($("#main_content>section").eq(i).children("div").length){
-                sections_m[i] += `<div class="selection_menu">${$("#main_content>section").eq(i).children("div").html()}</div>`
-            }
-        } else {
-            sections_m[i] = ''
-        }
+function loadAddData(idone, idtwo) {
+  console.log(idone);
+  let bck = "";
+  if (idtwo == "heh") {
+    if (!Array.isArray(data[value].sections_opt)) {
+      bck = data[value].sections_opt;
+      data[value].sections_opt = [];
+      data[value].sections_opt.push(bck);
     }
-    for (let i = 0; i < sections; i++){
-        if ($("#main_content>section").eq(i).children("div").length){
-            sections_o[i] = ''
-            let bro = []
-            $("#main_content>section").eq(i).children("div:not(:first)").each(function(){
-                bro.push($(this).html())
-            })
-            sections_o[i] = bro
-        }
-        else {
-            for (let j = 0; j < $("#main_content>section").eq(i).children("p", "ul", "ol", "h5", "h4").length; j++){
-                sections_o[i] = ''
-                $("#main_content>section").eq(i).children("p", "ul", "ol", "h5", "h4").each(function(){
-                    sections_o[i] += $(this)[0].outerHTML
-                })
-            }
-        }
-        
+    data[value].sections_opt[idone] = recievedData;
+    $(`${recievedData}`).appendTo(`#sec0${idone}`);
+  } else {
+    if (!Array.isArray(data[value].sections_opt)) {
+      bck = data[value].sections_opt;
+      data[value].sections_opt = [];
+      data[value].sections_opt.push(bck);
+      data[value].sections_opt[idone] = recievedData;
+    } else {
+      if (!Array.isArray(data[value].sections_opt[idone])) {
+        bck = data[value].sections_opt[idone];
+        data[value].sections_opt[idone] = [];
+        data[value].sections_opt[idone].push(bck);
+      }
+      data[value].sections_opt[idone][idtwo] = recievedData;
     }
-    let objecti = {
-        content: [$("#data_title").html(), $("#data_year").html()],
-        info: $("#main_info").html(),
-        sections_main: sections_m,
-        sections_opt: sections_o
-    } 
-
-    let res = JSON.stringify(objecti)
-    console.log(res)
+    //$(`#sec0{idone}`).children(":not(div):not(h3)").remove()
+    $(`${recievedData}`).appendTo(`#sec0${idone}`);
+  }
 }
+
+/*
+function getingsomedat() {
+  let sections = $("#main_content>section").length;
+  let sections_m = [];
+  let sections_o = [];
+  for (let i = 0; i < sections; i++) {
+    if ($("#main_content>section").eq(i).children("h3").length) {
+      sections_m[i] = `<h3>${$("#main_content>section")
+        .eq(i)
+        .children("h3")
+        .html()}</h3>`;
+      if ($("#main_content>section").eq(i).children("div").length) {
+        sections_m[i] += `<div class="selection_menu">${$(
+          "#main_content>section"
+        )
+          .eq(i)
+          .children("div")
+          .html()}</div>`;
+      }
+    } else {
+      sections_m[i] = "";
+    }
+  }
+  for (let i = 0; i < sections; i++) {
+    if ($("#main_content>section").eq(i).children("div").length) {
+      sections_o[i] = "";
+      let bro = [];
+      $("#main_content>section")
+        .eq(i)
+        .children("div:not(:first)")
+        .each(function () {
+          bro.push($(this).html());
+        });
+      sections_o[i] = bro;
+    } else {
+      for (
+        let j = 0;
+        j <
+        $("#main_content>section").eq(i).children("p", "ul", "ol", "h5", "h4")
+          .length;
+        j++
+      ) {
+        sections_o[i] = "";
+        $("#main_content>section")
+          .eq(i)
+          .children("p", "ul", "ol", "h5", "h4")
+          .each(function () {
+            sections_o[i] += $(this)[0].outerHTML;
+          });
+      }
+    }
+  }
+  let objecti = {
+    content: [$("#data_title").html(), $("#data_year").html()],
+    info: $("#main_info").html(),
+    sections_main: sections_m,
+    sections_opt: sections_o,
+  };
+
+  let res = JSON.stringify(objecti);
+}
+*/
