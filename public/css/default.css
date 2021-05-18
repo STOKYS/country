@@ -37,9 +37,11 @@ body {
 }
 
 #intro_box{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
 }
 
 #intro_box_button{
@@ -50,6 +52,7 @@ body {
     font-weight: 100;
     border: 2px solid;
     border-radius: 5px;
+    margin-top: 35%;
 }
 
 #intro_box>h1{
@@ -58,7 +61,7 @@ body {
     font-size: 72px;
     margin: 0;
     padding: 0;
-    padding-top: 20%;
+    padding-top: 2.5%;
     font-weight: 300;
 }
 
@@ -185,8 +188,8 @@ body {
 }
 
 .history_quick_box_info_class{
-    width: 40%;
-    margin-left: 30%;
+    width: 90%;
+    margin-left: 5%;
     height: 90%;
     margin-top: 2.5%;
     border-radius: 10px;
@@ -227,7 +230,7 @@ body {
 }
 
 #history_quick_box_info_image{
-    width: 50%;
+    width: 20%;
     float: right;
     margin-left: 10px;
     margin-top: 30px;
@@ -235,10 +238,11 @@ body {
 
 #history_quick_box_info_button{
     width: 50%;
-    height: 80%;
+    height: 100%;
     margin-left: 25%;
-    margin-top: 1.5%;
     border: 1px solid;
+    font-size: 28px;
+    font-weight: 300;
 }
 
 /* END QUICK */
@@ -264,10 +268,15 @@ header>button{
     height: 100%;
     margin: 0;
     float: left;
-    border: 0;
-    border-radius: 5px;
+    border: 3px solid grey;
+    border-radius: 10px;
     font-size: 22px;
     font-weight: 500;
+}
+
+header>button:disabled{
+    border-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 header>button:first-child{
