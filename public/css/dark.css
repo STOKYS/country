@@ -71,7 +71,7 @@ body {
 
 header, footer{
     background-color: rgb(25,30,40);
-    border-color: white;
+    /*border-color: white;*/
 }
 
 #main_content{
