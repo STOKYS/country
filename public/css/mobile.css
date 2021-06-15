@@ -41,8 +41,12 @@
         left: 0;
     }
 
+    header{
+        height: 50px;
+    }
+
     header>button{
-        width: 25%;
+        width: calc(100%/3);
         height: 100%;
         margin: 0;
         font-size: 22px;
@@ -51,5 +55,15 @@
     
     header>button:first-child{
         margin-left: 0%;
+    }
+    #history_quick_box_info_text{
+        padding: 0;
+        font-size: 12px;
+    }
+    #history_quick_box_info_year{
+        font-size: 16px;
+    }
+    #history_quick_box_info_title{
+        font-size: 24px;
     }
 }

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(50, 50, 50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,204,0,0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255,204,0);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 50);
+    width: 100%;
+    height: 100%;
+}
+
+#map_div{
+    float: left;
+    width: calc((100%/3)*2);
+    height: 100%;
+}
+
+#info_div{
+    float: left;
+    width: calc(100%/3);
+    height: 100%;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+#info_div>div{
+    width: 100%;
+}
+
+#info_h{
+    font-size: 42px;
+    text-align: center;
+    color: rgb(255,204,0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#info_s{
+    color: grey;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+#info_p{
+    padding: 30px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#info_img{
+    width: 50%;
+    margin-left: 25%;
+    border: 2px solid gray;
+}
+
+#cont_div{
+    padding: 10px;
+    width: 120px;
+    height: 50px;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0px 0px 20px 0px;
+    top: 0;
+    left: 0;
+}
+
+#cont_div>button{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+svg{
+    /*width: 100%;
+    height: auto;*/
+    margin: 0;
+    padding: 0;
+    /*margin-left: 300px;*/
+}
+
+path{
+    fill: rgb(219, 208, 164)
+}
+
+path:hover{
+    fill: rgb(219, 199, 119);
+}
+
+path:active{
+    fill: rgb(211, 186, 87);
+}
+
+circle{
+    fill: rgb(209, 47, 47)
+}
+
+circle:hover{
+    fill: rgb(231, 30, 30)
+}
+
+circle:active{
+    fill: rgb(255, 0, 0)
+}
+
+rect{
+    fill: rgb(68, 127, 255);
+}
+
+rect:hover{
+    fill: rgb(40, 108, 255);
+}
+
+rect:active{
+    fill: rgb(0, 81, 255);
+}
+
+@media only screen and (max-width: 1080px) {
+    #info_div{
+        width: 100%;
+        height: 50%;
+    }
+    #map_div{
+        width: 100%;
+        height: 50%;
+    }
+    #info_p{
+        font-size: 12px;
+    }
+    #info_h{
+        font-size: 22px;
+    }
+    #info_s{
+        font-size: 18px;
+    }
+}

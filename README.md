@@ -14,6 +14,7 @@ Web makes use of technologies:
 - [node.js](https://nodejs.org/en/)
 - [socket.io](https://socket.io/)
 - [express](https://expressjs.com/)
+- [jQuery](https://jquery.com/)
 
 ## How to use
 
@@ -31,4 +32,5 @@ You need to do:
 - Data reading from JSON files
 - Internet data efficient (nothing will be downloaded from the server until you request it / need it)
 - Nice and simple dark theme design
-- And probably like 100000 times better than anything anyone would be able to make about ancient greece
+- And probably like 100000 times better than anything anyone would be able to make about "ancient greece"
+- Full map of Germany, in 3d and 2d

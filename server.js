@@ -46,6 +46,16 @@ io.on("connection", (socket) => {
         })
         .catch(err => console.error("File read failed ", err))
     })
+    socket.on("map", (id) => {
+        readJSON('data/geodata.json')
+        .then(data => {
+            for (let i = 0; i < data.length; i++){
+                if(data[i][0] == id){
+                    socket.emit("returnData", {datanew: data[i], id: id})
+                }
+            }
+        })
+    })
 })
 
 const PORT = 8080 || process.env.PORT;

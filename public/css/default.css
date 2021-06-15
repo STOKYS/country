@@ -5,6 +5,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    scrollbar-color: rgba(255,204,0,0.25) rgb(50, 50, 50) ;
+    scrollbar-width: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -29,6 +31,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden
 }
 
 /* START TITLESCREEN */
@@ -285,7 +288,7 @@ body {
 header{
     top:0;
     position: sticky;
-    height: 70px;
+    height: 50px;
     width: 100%;
     /*border-bottom: 2px solid;*/
     z-index: 200;
@@ -308,7 +311,7 @@ header>button:disabled{
 }
 
 header>button:first-child{
-    margin-left: 30%;
+    margin-left: 35%;
 }
 
 main{
@@ -604,4 +607,9 @@ td{
 
 #main_info>ol{
     text-align: center;
+}
+
+svg{
+    width: 100vw;
+    height: 100vh;
 }

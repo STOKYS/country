@@ -70,17 +70,7 @@ const quickinfo = [
   },
 ];
 
-/*const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-if (darkThemeMq.matches) {
-  $("#theme").attr("href", "css/dark.css");
-} else {
-  alert(
-    "You are using White Theme, which might make your stay a little unpleasant. Please switch to Dark Theme in your device settings"
-  );
-  $("#theme").attr("href", "css/light.css");
-}*/
-
-if (navigator.platform != "Linux armv8l" || navigator.platform != "iPhone"){
+if (navigator.platform != "Linux armv8l" && navigator.platform != "iPhone"){
     $("#intro_video").attr("src", "https://www.youtube.com/embed/SuXsVEjYKI4?autoplay=1&loop=1&modestbranding=1&showinfo=0&rel=0&controls=0&disablekb=1&mute=1&playlist=SuXsVEjYKI4")
 }
 
@@ -96,6 +86,10 @@ $("#history_timeline_slider_slider").on("input", function () {
     $("#history_quick_box_info").fadeIn(200);
   }, 200);
 });
+
+$("#mapBtn").click(function(){
+    window.open(`${window.location.href}geo.html`)
+})
 
 $("body>section:not(:first-child)").hide();
 
@@ -134,7 +128,6 @@ function loadData() {
   console.log(data[value]);
   $("#data_title").html(data[value].content[0]);
   $("#data_year").html(data[value].content[1]);
-  console.log(data[value].info)
   if (data[value].info != null){
     $("#main_info").html(data[value].info);
   } else {
@@ -149,7 +142,12 @@ function loadData() {
     $(`#sec0${i}>h3`).css({ "border-bottom": "0" });
     $(`#sec0${i}`).css("min-height", "0");
   }
-  $(`${data[value].sections_opt}`).appendTo("#sec00");
+  if (Array.isArray(data[value].sections_opt)){
+    $(`${data[value].sections_opt[0]}`).appendTo("#sec00");
+  } else{
+    $(`${data[value].sections_opt}`).appendTo("#sec00");
+  }
+
   reconfigure();
 }
 
