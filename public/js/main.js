@@ -88,7 +88,8 @@ $("#history_timeline_slider_slider").on("input", function () {
 });
 
 $("#mapBtn").click(function(){
-    window.open(`${window.location.href}geo.html`)
+   window.open(`${window.location.protocol}//${window.location.host}/geo.html`)
+   //console.log(window.location)
 })
 
 $("body>section:not(:first-child)").hide();
